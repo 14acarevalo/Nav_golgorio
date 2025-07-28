@@ -1,0 +1,1 @@
+//Si se van a hacer cobros con remesas y tal deberia de añadirse un apartado adicional

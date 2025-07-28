@@ -1,0 +1,113 @@
+/* Sidebar.css */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 180px; /*Campo a tener en cuenta por si se quiere modificar el ancho*/
+  background-color: #ffffff;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: width 0.3s ease;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.sidebar.collapsed {
+  width: 80px;
+}
+
+.sidebar-header {
+  padding: 20px;
+  font-size: 1.5rem;
+  color: #0a5c36; /* Verde pino oscuro */
+  border-bottom: 1px solid #e0e0e0;
+  text-align: center;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+}
+
+.sidebar-menu li {
+  position: relative;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 14px 20px;
+  color: #0a5c36;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.2s, color 0.2s;
+  gap: 12px;
+  text-decoration: none;
+  width: 100%;
+  border: none;
+  background: none;
+  text-align: left;
+}
+
+.menu-item:hover {
+  background-color: #f0f7f4;
+  color: #084a2b;
+}
+
+.menu-item span {
+  flex: 1;
+}
+
+.submenu {
+  list-style: none;
+  padding-left: 40px;
+  margin: 8px 0;
+  background-color: #f9fbfa;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.submenu li a {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  color: #0a5c36;
+  text-decoration: none;
+  font-size: 0.95rem;
+  gap: 10px;
+  transition: color 0.2s;
+}
+
+.submenu li a:hover {
+  color: #084a2b;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+}
+
+.sidebar-logo {
+  width: 140px;        /* Ajusta este valor según lo que necesites */
+  height: auto;        /* Mantiene la proporción original */
+  max-height: 60px;    /* Límite máximo de altura */
+  object-fit: contain; /* Asegura que no se deforme */
+  display: block;
+  margin: 10px auto 15px auto; /* Espaciado arriba y abajo */
+  border-radius: 8px;  /* Opcional: bordes redondeados para suavizar */
+}
