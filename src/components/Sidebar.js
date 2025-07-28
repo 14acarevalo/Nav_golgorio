@@ -52,7 +52,7 @@ const Sidebar = () => {
           </a>
         </li>
 
-        {/* Calendario */}
+        {/* Calendario instalación */}
         <li>
           <a href="#calendario" className="menu-item">
             <FaCalendarAlt /> <span>Calendario</span>
