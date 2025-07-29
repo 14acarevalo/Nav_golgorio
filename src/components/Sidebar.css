@@ -4,7 +4,7 @@
   top: 0;
   left: 0;
   height: 100vh;
-  width: 180px; /*Campo a tener en cuenta por si se quiere modificar el ancho*/
+  width: 220px; /*Campo a tener en cuenta por si se quiere modificar el ancho*/
   background-color: #ffffff;
   box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -103,11 +103,11 @@
 }
 
 .sidebar-logo {
-  width: 140px;        /* Ajusta este valor según lo que necesites */
-  height: auto;        /* Mantiene la proporción original */
-  max-height: 60px;    /* Límite máximo de altura */
-  object-fit: contain; /* Asegura que no se deforme */
+  width: 140px;      
+  height: auto;        
+  max-height: 60px;    
+  object-fit: contain; 
   display: block;
-  margin: 10px auto 15px auto; /* Espaciado arriba y abajo */
-  border-radius: 8px;  /* Opcional: bordes redondeados para suavizar */
+  margin: 10px auto 15px auto; 
+  border-radius: 8px;  
 }

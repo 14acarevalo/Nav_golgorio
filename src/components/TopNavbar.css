@@ -1,0 +1,174 @@
+/* TopNavbar.css */
+
+.top-navbar {
+  position: fixed;
+  top: 0;
+  left: 220px; /* Alineado con el contenido (después del sidebar de 220px) */
+  width: calc(100% - 220px);
+  background-color: #0a5c36; /* Verde pino oscuro */
+  color: white;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 900;
+  transition: all 0.3s ease;
+}
+
+.navbar-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+}
+
+/* TopNavbar.css */
+
+.top-navbar {
+  position: fixed;
+  top: 0;
+  left: 220px; /* Empieza justo después del sidebar */
+  width: calc(100% - 220px); /* Ocupa el resto del ancho */
+  background-color: #0a5c36;
+  color: white;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 900;
+  transition: all 0.3s ease;
+}
+
+.navbar-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.navbar-title {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.profile-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #084a2b;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+}
+
+.profile-button:hover {
+  background: #063a20;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  list-style: none;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  min-width: 200px;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.dropdown-menu li a,
+.dropdown-menu li .logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  color: #333;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.dropdown-menu li a:hover,
+.dropdown-menu li .logout-btn:hover {
+  background-color: #f5f5f5;
+}
+
+.dropdown-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  cursor: pointer;
+}
+
+/* Responsive: Pantallas pequeñas */
+@media (max-width: 768px) {
+  .top-navbar {
+    left: 0;
+    width: 100%;
+  }
+
+  .navbar-container {
+    padding: 0 15px;
+    gap: 10px;
+  }
+
+  .navbar-title {
+    font-size: 1.1rem;
+    flex: 1;
+    text-align: center;
+  }
+
+  .profile-button {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+}
+
+/* Extra pequeño: móviles muy estrechos */
+@media (max-width: 480px) {
+  .navbar-title {
+    font-size: 1rem;
+  }
+
+  .profile-button span {
+    display: none; 
+  }
+
+  .profile-button {
+    padding: 6px;
+    font-size: 1.1rem;
+  }
+
+  .profile-button svg {
+    width: 18px;
+    height: 18px;
+  }
+}
